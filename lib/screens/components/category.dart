@@ -33,13 +33,10 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Check if the tapped course is "Graphic Design Master" before navigating
         if (product.title == "Graphic Design \n       Master") {
-          // Navigate to the "Graphic Design Master" course details screen
           Navigator.of(context).push(
             MaterialPageRoute(
-              builder: (context) =>
-                  const GDMScreen(), // Replace with your screen's name
+              builder: (context) => const GDMScreen(),
             ),
           );
         }
@@ -70,10 +67,10 @@ class CategoryCard extends StatelessWidget {
                 ),
               ),
               const SizedBox(
-                height: 10,
+                height: 4,
               ),
               Text(
-                "${product.courses} courses",
+                "${product.courses} topics",
                 style: const TextStyle(
                   fontSize: 15,
                   color: Colors.white,

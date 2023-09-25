@@ -17,18 +17,16 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      //bottom bar
-      // now we will use bottom bar package
       backgroundColor: bgcolor,
       bottomNavigationBar: ClipRRect(
         borderRadius: const BorderRadius.only(
-          topLeft: Radius.circular(20), // Adjust the border radius as needed
-          topRight: Radius.circular(20), // Adjust the border radius as needed
+          topLeft: Radius.circular(20),
+          topRight: Radius.circular(20),
         ),
         child: BottomNavyBar(
           containerHeight: 70,
           selectedIndex: _selectedIndex,
-          showElevation: true, // use this to remove appBar's elevation
+          showElevation: true,
           onItemSelected: (index) => setState(() {
             _selectedIndex = index;
           }),
@@ -65,7 +63,7 @@ class _HomeScreenState extends State<HomeScreen> {
           child: ListView(
             children: const [
               SizedBox(
-                height: 80,
+                height: 50,
               ),
               Padding(
                 padding: EdgeInsets.symmetric(horizontal: 10.0),
@@ -98,7 +96,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     //sorting
                     Sorting(),
                     SizedBox(
-                      height: 30,
+                      height: 20,
                     ),
                     //category list
 
@@ -116,12 +114,10 @@ class _HomeScreenState extends State<HomeScreen> {
                       ],
                     ),
 
-                    //now we create model of our images and colors which we will use in our app
                     SizedBox(
                       height: 30,
                     ),
-                    //we can not use gridview inside column
-                    //use shrinkwrap and physical scroll
+
                     CategoryList(),
                     SizedBox(
                       height: 20,
