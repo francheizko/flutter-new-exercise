@@ -30,7 +30,12 @@ class WelcomeScreen extends StatelessWidget {
                           bottomLeft: Radius.circular(20))),
                   child: Column(
                     children: [
-                      Expanded(child: Image.asset("assets/images/saly.png"))
+                      Expanded(
+                        child: Image.asset(
+                          "assets/images/saly.png",
+                          width: 500,
+                        ),
+                      ),
                     ],
                   ),
                 )),
@@ -49,8 +54,7 @@ class WelcomeScreen extends StatelessWidget {
                         children: [
                           const Spacer(),
                           const Align(
-                            alignment: Alignment
-                                .topLeft, // Position the text in the upper-left corner
+                            alignment: Alignment.topLeft,
                             child: Text(
                               "Graphic Design Master",
                               style: TextStyle(
@@ -64,14 +68,15 @@ class WelcomeScreen extends StatelessWidget {
                           ),
                           const Spacer(),
                           const Text(
-                            "Learn with pleasure with\nus,where you are!",
-                            textAlign: TextAlign.center,
+                            "Introduction Design Graphic",
+                            textAlign: TextAlign.left,
                             style: TextStyle(
                               color: Colors.white,
                               wordSpacing: 2.5,
                               height: 1.5,
-                              fontSize: 16,
-                              fontWeight: FontWeight.w500,
+                              fontSize: 20,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Roboto',
                             ),
                           ),
                           const Spacer(

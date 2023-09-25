@@ -1,25 +1,37 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_application_1/constants.dart';
 
 class Product {
   final String image, title;
   final int id, courses;
   final Color color;
+  final double imageWidth; 
+  final double imageHeight; 
+  final TextStyle textStyle; 
+
   Product({
     required this.image,
     required this.title,
     required this.courses,
     required this.color,
     required this.id,
+    this.imageWidth = 100, 
+    this.imageHeight = 100, 
+    this.textStyle = const TextStyle(
+      fontSize: 18,
+      fontWeight: FontWeight.bold,
+    ),
   });
 }
 
 List<Product> products = [
   Product(
     id: 1,
-    title: "Graphic Design",
-    image: "assets/images/graphics.png",
-    color: Color(0xFF71b8ff),
-    courses: 16,
+    title: "Graphic Design Master",
+    image: "assets/images/saly.png",
+    color: color1,
+    courses: 3,
+    imageWidth:
   ),
   Product(
     id: 2,

@@ -7,3 +7,4 @@ const korange = Color(0xFFffaa5b);
 const bgcolor = Color(0xFF29274F);
 const Gradient1 = Color(0xFFF4C465);
 const Gradient2 = Color(0xFFC63956);
+const color1 = Color(0xFFAFA8EE);

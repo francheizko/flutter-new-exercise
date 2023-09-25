@@ -64,6 +64,7 @@ flutter:
       - assets/icon/
       - assets/images/
       - assets/images/saly.png
+      - assets/images/maskgroup.png
   #   - images/a_dot_burr.jpeg
   #   - images/a_dot_ham.jpeg
 
