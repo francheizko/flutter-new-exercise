@@ -40,7 +40,7 @@ class GDMScreen extends StatelessWidget {
                   ),
                 )),
             Expanded(
-                flex: 2,
+                flex: 3,
                 child: Container(
                   color: kblue,
                   child: Container(
@@ -53,17 +53,10 @@ class GDMScreen extends StatelessWidget {
                       child: Column(
                         children: [
                           const Spacer(),
-                          const Align(
+                          Align(
                             alignment: Alignment.topLeft,
-                            child: Text(
-                              "Graphic Design Master",
-                              style: TextStyle(
-                                color: Colors.white,
-                                height: 0.5,
-                                fontSize: 30,
-                                fontWeight: FontWeight.w700,
-                                fontFamily: 'Roboto',
-                              ),
+                            child: Image.asset(
+                              "assets/images/Details.png",
                             ),
                           ),
                           const Spacer(),
@@ -97,7 +90,7 @@ class GDMScreen extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => HomeScreen()));
+                                          builder: (context) => const HomeScreen()));
                                 },
                                 child: const Text(
                                   "Back",

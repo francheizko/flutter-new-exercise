@@ -31,7 +31,6 @@ class CategoryCard extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    Widget iconOrImage;
     return GestureDetector(
       onTap: () {
         // Check if the tapped course is "Graphic Design Master" before navigating
@@ -40,7 +39,7 @@ class CategoryCard extends StatelessWidget {
           Navigator.of(context).push(
             MaterialPageRoute(
               builder: (context) =>
-                  GDMScreen(), // Replace with your screen's name
+                  const GDMScreen(), // Replace with your screen's name
             ),
           );
         }
@@ -69,10 +68,6 @@ class CategoryCard extends StatelessWidget {
                   color: Colors.white,
                   fontWeight: FontWeight.w600,
                 ),
-              ),
-              iconOrImage = Image.asset(
-                product.icon,
-                // Set the desired height for the image
               ),
               const SizedBox(
                 height: 10,
