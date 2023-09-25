@@ -5,9 +5,9 @@ class Product {
   final String image, title;
   final int id, courses;
   final Color color;
-  final double imageWidth; 
-  final double imageHeight; 
-  final TextStyle textStyle; 
+  final double imageWidth;
+  final double imageHeight;
+  final TextStyle textStyle;
 
   Product({
     required this.image,
@@ -15,8 +15,8 @@ class Product {
     required this.courses,
     required this.color,
     required this.id,
-    this.imageWidth = 100, 
-    this.imageHeight = 100, 
+    this.imageWidth = 100,
+    this.imageHeight = 100,
     this.textStyle = const TextStyle(
       fontSize: 18,
       fontWeight: FontWeight.bold,
@@ -31,7 +31,11 @@ List<Product> products = [
     image: "assets/images/saly.png",
     color: color1,
     courses: 3,
-    imageWidth:
+    imageWidth: 120,
+    textStyle: const TextStyle(
+      fontSize: 500, // Custom text size for this product
+      fontWeight: FontWeight.bold, // Customize other text styles as needed
+    ),
   ),
   Product(
     id: 2,

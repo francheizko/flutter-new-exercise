@@ -20,38 +20,44 @@ class _HomeScreenState extends State<HomeScreen> {
       //bottom bar
       // now we will use bottom bar package
       backgroundColor: bgcolor,
-      bottomNavigationBar: BottomNavyBar(
-        containerHeight: 70,
-        selectedIndex: _selectedIndex,
-        showElevation: true, // use this to remove appBar's elevation
-        onItemSelected: (index) => setState(() {
-          _selectedIndex = index;
-        }),
-        items: [
-          BottomNavyBarItem(
-              icon: const Icon(Icons.home),
-              title: const Text('Home'),
+      bottomNavigationBar: ClipRRect(
+        borderRadius: const BorderRadius.only(
+          topLeft: Radius.circular(20), // Adjust the border radius as needed
+          topRight: Radius.circular(20), // Adjust the border radius as needed
+        ),
+        child: BottomNavyBar(
+          containerHeight: 70,
+          selectedIndex: _selectedIndex,
+          showElevation: true, // use this to remove appBar's elevation
+          onItemSelected: (index) => setState(() {
+            _selectedIndex = index;
+          }),
+          items: [
+            BottomNavyBarItem(
+                icon: const Icon(Icons.home),
+                title: const Text('Home'),
+                activeColor: kpink,
+                inactiveColor: Colors.grey[300]),
+            BottomNavyBarItem(
+              icon: const Icon(Icons.favorite_rounded),
+              title: const Text('Favorite'),
+              inactiveColor: Colors.grey[300],
               activeColor: kpink,
-              inactiveColor: Colors.grey[300]),
-          BottomNavyBarItem(
-            icon: const Icon(Icons.favorite_rounded),
-            title: const Text('Favorite'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-          BottomNavyBarItem(
-            icon: const Icon(Icons.message),
-            title: const Text('Messages'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-          BottomNavyBarItem(
-            icon: const Icon(Icons.person),
-            title: const Text('Profile'),
-            inactiveColor: Colors.grey[300],
-            activeColor: kpink,
-          ),
-        ],
+            ),
+            BottomNavyBarItem(
+              icon: const Icon(Icons.message),
+              title: const Text('Messages'),
+              inactiveColor: Colors.grey[300],
+              activeColor: kpink,
+            ),
+            BottomNavyBarItem(
+              icon: const Icon(Icons.person),
+              title: const Text('Profile'),
+              inactiveColor: Colors.grey[300],
+              activeColor: kpink,
+            ),
+          ],
+        ),
       ),
       body: SafeArea(
         child: ListView(

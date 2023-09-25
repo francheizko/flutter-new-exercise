@@ -26,18 +26,14 @@ class Sorting extends StatelessWidget {
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
           child: const Text(
             "Design",
-            style: TextStyle(
-              fontSize: 18.0,
-            ),
+            style: TextStyle(fontSize: 18.0, color: Colors.white),
           ),
         ),
         Container(
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
           child: const Text(
             "Marketing",
-            style: TextStyle(
-              fontSize: 18.0,
-            ),
+            style: TextStyle(fontSize: 18.0, color: Colors.white),
           ),
         ),
         Padding(
