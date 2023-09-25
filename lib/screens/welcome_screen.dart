@@ -17,10 +17,17 @@ class WelcomeScreen extends StatelessWidget {
                 child: Container(
                   width: double.infinity,
                   decoration: const BoxDecoration(
-                      color: kblue,
+                      gradient: LinearGradient(
+                        colors: [
+                          Gradient1,
+                          Gradient2
+                        ], // Define your gradient colors
+                        begin: Alignment.topLeft,
+                        end: Alignment.bottomRight,
+                      ),
                       borderRadius: BorderRadius.only(
-                          bottomRight: Radius.circular(50),
-                          bottomLeft: Radius.circular(50))),
+                          bottomRight: Radius.circular(20),
+                          bottomLeft: Radius.circular(20))),
                   child: Column(
                     children: [
                       Expanded(child: Image.asset("assets/images/saly.png"))
@@ -37,17 +44,22 @@ class WelcomeScreen extends StatelessWidget {
                       color: bgcolor,
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.all(15.0),
+                      padding: const EdgeInsets.all(25.0),
                       child: Column(
                         children: [
                           const Spacer(),
-                          const Text(
-                            "Graphic Design Master",
-                            style: TextStyle(
-                              color: Colors.white,
-                              height: 0.5,
-                              fontSize: 28,
-                              fontWeight: FontWeight.bold,
+                          const Align(
+                            alignment: Alignment
+                                .topLeft, // Position the text in the upper-left corner
+                            child: Text(
+                              "Graphic Design Master",
+                              style: TextStyle(
+                                color: Colors.white,
+                                height: 0.5,
+                                fontSize: 30,
+                                fontWeight: FontWeight.w700,
+                                fontFamily: 'Roboto',
+                              ),
                             ),
                           ),
                           const Spacer(),
@@ -83,7 +95,7 @@ class WelcomeScreen extends StatelessWidget {
                                           builder: (context) => HomeScreen()));
                                 },
                                 child: const Text(
-                                  "Get Started",
+                                  "Back",
                                   style: TextStyle(
                                       fontWeight: FontWeight.bold,
                                       fontSize: 18,
