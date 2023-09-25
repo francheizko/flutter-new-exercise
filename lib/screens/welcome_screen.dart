@@ -1,6 +1,6 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'package:e_learning_app/screens/home_screen.dart';
+import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
 
