@@ -56,22 +56,10 @@ class GDMScreen extends StatelessWidget {
                           Align(
                             alignment: Alignment.topLeft,
                             child: Image.asset(
-                              "assets/images/Details.png",
+                              "assets/images/newdetails.jpg",
                             ),
                           ),
-                          const Spacer(),
-                          const Text(
-                            "Introduction Design Graphic",
-                            textAlign: TextAlign.left,
-                            style: TextStyle(
-                              color: Colors.white,
-                              wordSpacing: 2.5,
-                              height: 1.5,
-                              fontSize: 20,
-                              fontWeight: FontWeight.bold,
-                              fontFamily: 'Roboto',
-                            ),
-                          ),
+
                           const Spacer(
                             flex: 3,
                           ),
@@ -90,7 +78,8 @@ class GDMScreen extends StatelessWidget {
                                   Navigator.push(
                                       context,
                                       MaterialPageRoute(
-                                          builder: (context) => const HomeScreen()));
+                                          builder: (context) =>
+                                              const HomeScreen()));
                                 },
                                 child: const Text(
                                   "Back",
