@@ -2,8 +2,8 @@ import 'package:flutter_application_1/screens/home_screen.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/constants.dart';
 
-class WelcomeScreen extends StatelessWidget {
-  const WelcomeScreen({Key? key}) : super(key: key);
+class GDMScreen extends StatelessWidget {
+  const GDMScreen({Key? key}) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

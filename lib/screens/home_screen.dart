@@ -98,7 +98,7 @@ class _HomeScreenState extends State<HomeScreen> {
                     //sorting
                     Sorting(),
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     //category list
 
@@ -118,7 +118,7 @@ class _HomeScreenState extends State<HomeScreen> {
 
                     //now we create model of our images and colors which we will use in our app
                     SizedBox(
-                      height: 20,
+                      height: 30,
                     ),
                     //we can not use gridview inside column
                     //use shrinkwrap and physical scroll
