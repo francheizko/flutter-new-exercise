@@ -11,7 +11,7 @@ class CategoryList extends StatelessWidget {
   Widget build(BuildContext context) {
     return GridView.builder(
         shrinkWrap: true,
-        physics: const ScrollPhysics(),
+        // physics: const ScrollPhysics(),
         itemCount: products.length,
         gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
             crossAxisCount: 2, childAspectRatio: 0.85),
@@ -33,13 +33,16 @@ class CategoryCard extends StatelessWidget {
   Widget build(BuildContext context) {
     return GestureDetector(
       onTap: () {
-        // Navigate to the "Graphic Design Master" course details screen
-        Navigator.of(context).push(
-          MaterialPageRoute(
-            builder: (context) =>
-                GDMScreen(), // Replace with your screen's name
-          ),
-        );
+        // Check if the tapped course is "Graphic Design Master" before navigating
+        if (product.title == "Graphic Design \n       Master") {
+          // Navigate to the "Graphic Design Master" course details screen
+          Navigator.of(context).push(
+            MaterialPageRoute(
+              builder: (context) =>
+                  GDMScreen(), // Replace with your screen's name
+            ),
+          );
+        }
       },
       child: Padding(
         padding: const EdgeInsets.all(10.0),
