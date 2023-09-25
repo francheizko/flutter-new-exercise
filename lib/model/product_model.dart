@@ -4,6 +4,7 @@ import 'package:flutter_application_1/constants.dart';
 class Product {
   final String image, title;
   final int id, courses;
+  final String icon;
   //final Color color;
   final double imageWidth;
   final double imageHeight;
@@ -11,6 +12,7 @@ class Product {
   final LinearGradient backgroundGradient;
 
   Product({
+    required this.icon,
     required this.image,
     required this.title,
     required this.courses,
@@ -31,6 +33,7 @@ List<Product> products = [
     id: 1,
     title: "Graphic Design \n       Master",
     image: "assets/images/saly.png",
+    icon: "assets/icon/Frames.png",
     courses: 3,
     imageWidth: 120,
     textStyle: const TextStyle(
@@ -47,6 +50,7 @@ List<Product> products = [
     id: 2,
     title: "Programming",
     image: "assets/images/programming.png",
+    icon: "assets/icon/Frames.png",
     courses: 8,
     backgroundGradient: const LinearGradient(
       begin: Alignment.topLeft,
@@ -58,6 +62,7 @@ List<Product> products = [
     id: 3,
     title: "Finance",
     image: "assets/images/finance.png",
+    icon: "assets/icon/Frames.png",
     courses: 5,
     backgroundGradient: const LinearGradient(
       begin: Alignment.topLeft,
@@ -69,6 +74,7 @@ List<Product> products = [
     id: 4,
     title: "UI/Ux design",
     image: "assets/images/ux.png",
+    icon: "assets/icon/Frames.png",
     courses: 3,
     backgroundGradient: const LinearGradient(
       begin: Alignment.topLeft,
