@@ -25,20 +25,23 @@ class CategoryCard extends StatelessWidget {
     Key? key,
     required this.product,
   }) : super(key: key);
+
   final Product product;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.all(10.0),
       child: Container(
-        padding: const EdgeInsets.all(10.0),
         decoration: BoxDecoration(
-            color: product.color, borderRadius: BorderRadius.circular(15.0)),
+          borderRadius: BorderRadius.circular(15.0),
+          gradient: product.backgroundGradient, // Use the product's gradient
+        ),
         child: Column(
           children: [
             Image.asset(
               product.image,
-              height: 100,
+              height: 150,
             ),
             const SizedBox(
               height: 10,
@@ -46,9 +49,11 @@ class CategoryCard extends StatelessWidget {
             Text(
               product.title,
               style: const TextStyle(
-                  fontSize: 18,
-                  color: Colors.white,
-                  fontWeight: FontWeight.w600),
+                fontFamily: 'Roboto',
+                fontSize: 20,
+                color: Colors.white,
+                fontWeight: FontWeight.w600,
+              ),
             ),
             const SizedBox(
               height: 10,

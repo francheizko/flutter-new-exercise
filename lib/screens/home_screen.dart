@@ -59,75 +59,78 @@ class _HomeScreenState extends State<HomeScreen> {
           ],
         ),
       ),
-      body: SafeArea(
-        child: ListView(
-          children: const [
-            SizedBox(
-              height: 80,
-            ),
-            Padding(
-              padding: EdgeInsets.symmetric(horizontal: 10.0),
-              child: Column(
-                children: [
-                  Row(
-                    children: [
-                      Column(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: [
-                          Text(
-                            "Online \nMasterClass",
-                            style: TextStyle(
-                              color: Colors.white,
-                              fontSize: 45,
-                              fontWeight: FontWeight.bold,
-                            ),
-                          ),
-                          SizedBox(
-                            height: 10.0,
-                          ),
-                        ],
-                      ),
-                      Spacer(),
-                    ],
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  //sorting
-                  Sorting(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  //category list
-
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        "Categories",
-                        style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 18,
-                          fontWeight: FontWeight.bold,
-                        ),
-                      ),
-                    ],
-                  ),
-
-                  //now we create model of our images and colors which we will use in our app
-                  SizedBox(
-                    height: 20,
-                  ),
-//we can not use gridview inside column
-//use shrinkwrap and physical scroll
-                  CategoryList(),
-                  SizedBox(
-                    height: 20,
-                  ),
-                ],
+      body: Padding(
+        padding: const EdgeInsets.all(16.0),
+        child: SafeArea(
+          child: ListView(
+            children: const [
+              SizedBox(
+                height: 80,
               ),
-            )
-          ],
+              Padding(
+                padding: EdgeInsets.symmetric(horizontal: 10.0),
+                child: Column(
+                  children: [
+                    Row(
+                      children: [
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text(
+                              "Online \nMasterClass",
+                              style: TextStyle(
+                                color: Colors.white,
+                                fontSize: 45,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            SizedBox(
+                              height: 10.0,
+                            ),
+                          ],
+                        ),
+                        Spacer(),
+                      ],
+                    ),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    //sorting
+                    Sorting(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                    //category list
+
+                    Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Text(
+                          "Categories",
+                          style: TextStyle(
+                            color: Colors.white,
+                            fontSize: 18,
+                            fontWeight: FontWeight.bold,
+                          ),
+                        ),
+                      ],
+                    ),
+
+                    //now we create model of our images and colors which we will use in our app
+                    SizedBox(
+                      height: 20,
+                    ),
+                    //we can not use gridview inside column
+                    //use shrinkwrap and physical scroll
+                    CategoryList(),
+                    SizedBox(
+                      height: 20,
+                    ),
+                  ],
+                ),
+              )
+            ],
+          ),
         ),
       ),
     );

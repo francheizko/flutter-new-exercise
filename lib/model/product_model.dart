@@ -4,17 +4,19 @@ import 'package:flutter_application_1/constants.dart';
 class Product {
   final String image, title;
   final int id, courses;
-  final Color color;
+  //final Color color;
   final double imageWidth;
   final double imageHeight;
   final TextStyle textStyle;
+  final LinearGradient backgroundGradient;
 
   Product({
     required this.image,
     required this.title,
     required this.courses,
-    required this.color,
+    // required this.color,
     required this.id,
+    required this.backgroundGradient,
     this.imageWidth = 100,
     this.imageHeight = 100,
     this.textStyle = const TextStyle(
@@ -27,35 +29,51 @@ class Product {
 List<Product> products = [
   Product(
     id: 1,
-    title: "Graphic Design Master",
+    title: "Graphic Design \n       Master",
     image: "assets/images/saly.png",
-    color: color1,
     courses: 3,
     imageWidth: 120,
     textStyle: const TextStyle(
-      fontSize: 500, // Custom text size for this product
+      fontSize: 20, // Custom text size for this product
       fontWeight: FontWeight.bold, // Customize other text styles as needed
+    ),
+    backgroundGradient: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [Gradient1, Gradient2],
     ),
   ),
   Product(
     id: 2,
     title: "Programming",
     image: "assets/images/programming.png",
-    color: Color(0xFFff6374),
-    courses: 22,
+    courses: 8,
+    backgroundGradient: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [color1, color2],
+    ),
   ),
   Product(
     id: 3,
     title: "Finance",
     image: "assets/images/finance.png",
-    color: Color(0xFFffaa5b),
-    courses: 15,
+    courses: 5,
+    backgroundGradient: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [Gradient3, Gradient4],
+    ),
   ),
   Product(
     id: 4,
     title: "UI/Ux design",
     image: "assets/images/ux.png",
-    color: Color(0xFF9ba0fc),
-    courses: 18,
+    courses: 3,
+    backgroundGradient: const LinearGradient(
+      begin: Alignment.topLeft,
+      end: Alignment.bottomRight,
+      colors: [Gradient5, Gradient6],
+    ),
   ),
 ];

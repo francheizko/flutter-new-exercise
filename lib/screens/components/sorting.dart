@@ -14,7 +14,7 @@ class Sorting extends StatelessWidget {
       mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+          padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 10),
           decoration: BoxDecoration(
               color: kpink, borderRadius: BorderRadius.circular(10.0)),
           child: const Text(
@@ -23,23 +23,22 @@ class Sorting extends StatelessWidget {
           ),
         ),
         Container(
-          padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
+          decoration: BoxDecoration(
+              color: color2, borderRadius: BorderRadius.circular(10.0)),
+          padding: const EdgeInsets.symmetric(horizontal: 50.0, vertical: 10),
           child: const Text(
-            "Design",
+            "New",
             style: TextStyle(fontSize: 18.0, color: Colors.white),
           ),
         ),
         Container(
+          decoration: BoxDecoration(
+              color: color2, borderRadius: BorderRadius.circular(10.0)),
           padding: const EdgeInsets.symmetric(horizontal: 15.0, vertical: 10),
           child: const Text(
-            "Marketing",
+            "Recommended",
             style: TextStyle(fontSize: 18.0, color: Colors.white),
           ),
-        ),
-        Padding(
-          padding: const EdgeInsets.only(right: 10),
-          child:
-              Container(height: 20, child: Image.asset("assets/icon/sort.png")),
         ),
       ],
     );
